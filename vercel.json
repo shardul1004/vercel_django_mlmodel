@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "mlmodel/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "mlmodel/wsgi.py"
+      }
+    ]
+  }
